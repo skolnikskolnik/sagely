@@ -1,0 +1,20 @@
+@import '../../styles/styles';
+
+.card {
+    background-color: $color-hue-background;
+    width: 80%;
+    margin: $spacing-8 auto;
+    text-align: center;
+}
+
+.innerBody {
+    background-color: $color-hue-background;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: $spacing-8;
+}
+
+.button {
+    background-color: $color-hue-card-background;
+}

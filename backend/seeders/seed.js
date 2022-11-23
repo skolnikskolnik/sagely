@@ -31,16 +31,23 @@ mongoose.connect(process.env.MONGO_URI)
                 // remove the header row
                 csvData.shift()
 
+                const seedDB = async () => {
+                    await db.models.Item.deleteMany({}) // clear out any values that may be there before adding the seed values
+                    await db.models.Item.insertMany(csvData)
+                        .then(data => {
+                            console.log(data.length + " records inserted!");
+                            process.exit(0)
+                        })
+                        .catch(err => {
+                            console.error(err);
+                            process.exit(1)
+                        })
+                }
 
-                db.models.Item.insertMany(csvData)
-                    .then(data => {
-                        console.log(data.length + " records inserted!");
-                        process.exit(0)
-                    })
-                    .catch(err => {
-                        console.error(err);
-                        process.exit(1)
-                    })
+                seedDB().then(() => {
+                    mongoose.connection.close()
+                })
+
             })
 
         stream.pipe(csvStream)
