@@ -1,0 +1,12 @@
+@import './styles/styles';
+
+.container {
+    background-color: $color-background;
+    padding: $spacing-20;
+    font-family: $font-family;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
