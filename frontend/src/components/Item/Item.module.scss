@@ -17,4 +17,14 @@
 
 .button {
     background-color: $color-hue-card-background;
+    border: 1px solid $color-hue-subheadline;
+    padding: $spacing-2;
+
+    &:hover {
+        background-color: $color-button;
+    }
+
+    a {
+        color: $color-button-text;
+    }
 }

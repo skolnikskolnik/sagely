@@ -6,3 +6,13 @@
     font-family: $font-family;
     width: 100%;
 }
+
+.header {
+    background-color: $color-button;
+    text-align: center;
+    padding: $spacing-24;
+
+    h1 {
+        color: $color-headline;
+    }
+}

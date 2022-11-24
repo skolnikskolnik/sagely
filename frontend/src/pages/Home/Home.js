@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import Item from '../../components/Item/Item'
 
-import { text } from '../../constants/constants'
-import styles from './Home.module.scss'
-
 const Home = () => {
     const [items, setItems] = useState(null)
 
@@ -24,10 +21,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className={styles.container}>
-                <h1>{text.header}</h1>
-            </div>
-            {items && items.map(item => <Item item={item} />)}
+            {items && items.map(item => <div key={item._id}><Item item={item} /></div>)}
         </div>
     )
 }
