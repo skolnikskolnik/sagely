@@ -1,3 +1,31 @@
+@import '../../styles/styles';
+
 .container {
-    background-color: lavender;
+    padding: $spacing-8;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: $spacing-24;
+    position: relative;
+}
+
+.itemContainer {
+    background-color: $color-hue-background;
+    padding: $spacing-24;
+}
+
+.leftColumn {
+    float: left;
+    width: 30%;
+}
+
+.rightColumn {
+    float: left;
+    width: 70%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
