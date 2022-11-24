@@ -14,7 +14,7 @@ export const text = {
     dateAdded: 'Date added: ',
     dateModified: 'Date modified: ',
     date: 'Date: ',
-    noItemFound: 'No item found'
+    noItemFound: 'No item found',
 }
 
 export default text
