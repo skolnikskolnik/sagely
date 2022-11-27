@@ -24,7 +24,7 @@ Establish a database connection:
 3. Verify the information is accurate (AWS, the appropriate region), then click "Create Cluster". You can optionally rename the cluster.
 4. Create a username and password. 
 5. On the left-hand navigation, select "Network Access", then click "Add IP Address", then "Add Current IP Address", then "Confirm"
-6. On the left-hand navigation, select "Database", then click "Connect" next to the cluster name. Click "Connect your application", then copy the value down to a word document. You will need this for the next step. Your screen should look like thisL ![database connection](./images/database_connection.png)
+6. On the left-hand navigation, select "Database", then click "Connect" next to the cluster name. Click "Connect your application", then copy the value down to a word document. You will need this for the next step. Your screen should look like this: ![database connection](./images/database_connection.png)
 
 First we need to make an env file
 1. In the backend folder, create a file called '.env'
