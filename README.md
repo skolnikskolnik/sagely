@@ -16,7 +16,7 @@
 This is a skills assessment for Sagely. This is a web application in which the user is presented with a list of values, and the user can view more information on a separate page.
 
 ## Installation instructions: 
-If you are not already a user for MongoDB: [create an account here](https://www.mongodb.com/atlas/database)
+If you are not already a user for MongoDB [create an account here](https://www.mongodb.com/atlas/database).
 
 Establish a database connection:
 1. Sign into MongoDB
@@ -42,12 +42,14 @@ The application is installed and ready to run!
 ## Running a local instance:
 1. Open a terminal and navigate to the backend folder. Run the command 'npm start'
 2. Open a second terminal and navigate to the frontend folder. Run the command 'npm run start'
+3. This will likely open a browser tab with the application, but if it does not, open a browser and navigate to 'http://localhost:3000/'.
 
 ## Testing instructions: 
 1. With the web app running in a browser, click "See more" on any item. 
 2. Once on the other page, copy the mongoid from the URL in the browser, for example "638027e9d9a73469e090435b" from "http://localhost:3000/638027e9d9a73469e090435b"
 3. Open item.test.js in the "tests" folder, which is found in the backend folder
-4. On line 34, replace the existing mongoId with the one from the browser.
+4. On line 32, replace the existing mongoId with the one from the browser.
+6. If the backend server is running, kill the server usingt he commang command+C.
 5. Open a terminal, navigate to the backend folder and enter 'npm run test'.
 
 ## License:  
