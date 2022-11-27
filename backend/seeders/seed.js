@@ -5,6 +5,7 @@ const fastcsv = require("fast-csv")
 const mongoose = require('mongoose')
 const { db } = require('../models/itemModel')
 
+// is there a way to write a test function for this?
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         let stream = fs.createReadStream("dataset.csv")

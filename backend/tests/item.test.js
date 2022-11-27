@@ -17,6 +17,7 @@ afterEach(async () => {
     server.close()
 })
 
+
 describe("GET /api/items", () => {
     it("should return all items", async () => {
         const res = await request(app).get("/api/items/")
@@ -27,7 +28,10 @@ describe("GET /api/items", () => {
 
 describe("GET /api/items/:itemId", () => {
     it("should return one item", async () => {
-        const res = await request(app).get("/api/items/637e95dda39830492365af1b")
+        // THIS VALUE MUST BE CHANGED EACH TIME THE DATABASE IS SEEDED - REPLACE THIS VALUE
+        const validMongoId = '638027e9d9a73469e090435b'
+
+        const res = await request(app).get(`/api/items/${validMongoId}`)
         expect(res.statusCode).toBe(200)
         expect(res.body).toEqual(
             expect.objectContaining({
