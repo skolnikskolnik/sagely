@@ -16,30 +16,33 @@
 This is a skills assessment for Sagely. This is a web application in which the user is presented with a list of values, and the user can view more information on a separate page.
 
 ## Installation instructions: 
-If you are not already a user for MongoDB [create an account here](https://www.mongodb.com/atlas/database).
+If you are not already a user for MongoDB [create an account here](https://www.mongodb.com/atlas/database). 
 
 Establish a database connection:
 1. Sign into MongoDB
-2. If you already have a database, skip this step. If you do not already have a database, click "Build a Database", then verify that the information is accurate. You can use AWS and any region. You can optionally rename the cluster as well.
+2. If you already have a database, skip this step. If you do not already have a database, click "Build a Database", select the free option, then verify the region is correct and you are using AWS. You can optionally rename the cluster as well.
 3. If you do not already have a username and password, create one using the "Database Access" tab on the left-hand navigation. You will need the username and password in a later step. 
 4. On the left-hand navigation, select "Network Access", then click "Add IP Address", then "Add Current IP Address", then "Confirm".
 5. On the left-hand navigation, select "Database", then click "Connect" next to the cluster name. Click "Connect your application", then copy the value down to a word document. You will need this for the next step. Your screen should look like this: ![database connection](./images/database_connection.png) 
 
 First we need to make an env file
 1. In the backend folder, create a file called '.env'
-2. In this file, enter "PORT=4000" in the first line
-3. In the second line, first enter 'MONGO_URI=', then take the string copied from step #6 in the previous set of directions, and copy and paste that. Make sure to put your mongodb password instead of the placeholder. The file should look like this, but substitute in your mongodb username and password: ![env file](./images/env.png)
+2. In this file, enter ``` 
+PORT=4000``` in the first line
+3. In the second line, first enter ``` 
+MONGO_URI=```, then take the string copied from step #6 in the previous set of directions, and copy and paste that. Make sure to put your mongodb password instead of the placeholder. The file should look like this, but substitute in your mongodb username and password: ![env file](./images/env.png)
 
 Then you will need to install the node packages. To do so, open a terminal in the root folder.
 1. Navigate to the backend folder by typing 'cd backend' and type 'npm install'
 2. Navigate to the frontend folder, and type 'npm install'
 
 First time users will need to seed the database. To do so:
-1. Navigate to the backend folder, then run the 'npm run seed' command
+1. Navigate to the backend folder, then run the 'npm run seed' command. If this throws an error, confirm that the username and password in the env file is correct.
 
 The application is installed and ready to run!
 
 ## Running a local instance:
+If you have never used nodemon before, you can install it by typing 'npm install nodemon'. 
 1. Open a terminal and navigate to the backend folder. Run the command 'npm start'
 2. Open a second terminal and navigate to the frontend folder. Run the command 'npm run start'
 3. This will likely open a browser tab with the application, but if it does not, open a browser and navigate to 'http://localhost:3000/'.
