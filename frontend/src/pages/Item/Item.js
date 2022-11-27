@@ -19,7 +19,7 @@ const Item = () => {
     const { itemId } = useParams()
     const [item, setItem] = useState(null)
 
-    // initial fetch for all of the item
+    // initial fetch for the item
     useEffect(() => {
         const fetchItem = async () => {
             const response = await fetch(`/api/items/${itemId}`)

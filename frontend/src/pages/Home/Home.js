@@ -11,9 +11,7 @@ const Home = () => {
             const response = await fetch('/api/items/')
             const json = await response.json()
 
-            if (response.ok) {
-                setItems(json)
-            }
+            if (response.ok) setItems(json)
         }
 
         fetchItems()

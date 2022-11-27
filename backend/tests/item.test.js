@@ -28,8 +28,8 @@ describe("GET /api/items", () => {
 
 describe("GET /api/items/:itemId", () => {
     it("should return one item", async () => {
-        // THIS VALUE MUST BE CHANGED EACH TIME THE DATABASE IS SEEDED - REPLACE THIS VALUE
-        const validMongoId = '638027e9d9a73469e090435b'
+        // This value must be changed each time the database is seeded - replace this value
+        const validMongoId = '638395f27cf41405ed3d632b'
 
         const res = await request(app).get(`/api/items/${validMongoId}`)
         expect(res.statusCode).toBe(200)
@@ -51,12 +51,12 @@ describe("GET /api/items/:itemId", () => {
         )
     })
 
-    it("should return error if ObjectId is invalid", async () => {
+    it("should return 400 error if ObjectId is invalid", async () => {
         const res = await request(app).get("/api/items/bbb")
         expect(res.statusCode).toBe(400)
     })
 
-    it("should return error if ObjectId is valid but no item is found", async () => {
+    it("should return 404 error if ObjectId is valid but no item is found", async () => {
         const res = await request(app).get("/api/items/637e95dda33830492365af1a")
         expect(res.statusCode).toBe(404)
     })

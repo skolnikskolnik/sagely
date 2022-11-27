@@ -1,6 +1,5 @@
 require('dotenv').config()
 const fs = require("fs")
-const mongodb = require("mongodb").MongoClient
 const fastcsv = require("fast-csv")
 const mongoose = require('mongoose')
 const { db } = require('../models/itemModel')

@@ -2,9 +2,8 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-// There is likely a better data type than string for the dates
+// There is likely a better data type than string for the dates, but the Date format throws an error on seeding
 // The item_type can be restricted to only certain values
-// Some values should be required 
 const itemSchema = new Schema({
     url: {
         type: String,
