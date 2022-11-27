@@ -16,13 +16,27 @@
 This is a skills assessment for Sagely. This is a web application in which the user is presented with a list of values, and the user can view more information on a separate page.
 
 ## Installation instructions: 
-First time users will need to seed the database. To do so:
-1. In the project root directory, navigate to the backend folder by typing in the terminal 'cd backend'
-2. Run the 'npm run seed' command
+If you are not already a user for MongoDB: create a free ![create an account here](https://www.mongodb.com/atlas/database)
 
-Once seeded, you will need to install the node packages. 
-1. Navigate to the backend folder and type 'npm install'
-2. Navigate to the frontend folder and type 'npm install'
+Establish a database connection:
+1. Log in, then click "Build a Database"
+2. Click "Create" on the free option for the shared database. 
+3. Verify the information is accurate (AWS, the appropriate region), then click "Create Cluster". You can optionally rename the cluster.
+4. Create a username and password. 
+5. On the left-hand navigation, select "Network Access", then click "Add IP Address", then "Add Current IP Address", then "Confirm"
+6. On the left-hand navigation, select "Database", then click "Connect" next to the cluster name. Click "Connect your application", then copy the value down to a word document. You will need this for the next step. Your screen should look like thisL ![database connection](./images/database_connection.png)
+
+First we need to make an env file
+1. In the backend folder, create a file called '.env'
+2. In this file, enter "PORT=4000" in the first line
+3. In the second line, first enter 'MONGO_URI=', then take the string copied from step #6 in the previous set of directions, and copy and paste that. Make sure to put your mongodb password instead of the placeholder. The file should look like this, but substitute in your mongodb username and password: ![env file](./images/env.png)
+
+Then you will need to install the node packages. To do so, open a terminal in the root folder.
+1. Navigate to the backend folder by typing 'cd backend' and type 'npm install'
+2. Navigate to the frontend folder, and type 'npm install'
+
+First time users will need to seed the database. To do so:
+1. Navigate to the backend folder, then run the 'npm run seed' command
 
 The application is installed and ready to run!
 
