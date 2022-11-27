@@ -63,7 +63,7 @@ Visit my <a href='https://www.github.com/skolnikskolnik'>github page.</a>
 
 Email me at juliealtman215@gmail.com with any additional questions you may have. I am always happy to talk to users of my product!
     
-## Overview of technologies used
+## Overview of technologies
 
 The backend uses a MongoDB database run on an express server. The csv file is converted to json using the fastcsv package.
 
