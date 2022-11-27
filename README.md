@@ -16,15 +16,14 @@
 This is a skills assessment for Sagely. This is a web application in which the user is presented with a list of values, and the user can view more information on a separate page.
 
 ## Installation instructions: 
-If you are not already a user for MongoDB: create a free ![create an account here](https://www.mongodb.com/atlas/database)
+If you are not already a user for MongoDB: [create an account here](https://www.mongodb.com/atlas/database)
 
 Establish a database connection:
-1. Log in, then click "Build a Database"
-2. Click "Create" on the free option for the shared database. 
-3. Verify the information is accurate (AWS, the appropriate region), then click "Create Cluster". You can optionally rename the cluster.
-4. Create a username and password. 
-5. On the left-hand navigation, select "Network Access", then click "Add IP Address", then "Add Current IP Address", then "Confirm"
-6. On the left-hand navigation, select "Database", then click "Connect" next to the cluster name. Click "Connect your application", then copy the value down to a word document. You will need this for the next step. Your screen should look like this: ![database connection](./images/database_connection.png)
+1. Sign into MongoDB
+2. If you already have a database, skip this step. If you do not already have a database, click "Build a Database", then verify that the information is accurate. You can use AWS and any region. You can optionally rename the cluster as well.
+3. If you do not already have a username and password, create one using the "Database Access" tab on the left-hand navigation. You will need the username and password in a later step. 
+4. On the left-hand navigation, select "Network Access", then click "Add IP Address", then "Add Current IP Address", then "Confirm".
+5. On the left-hand navigation, select "Database", then click "Connect" next to the cluster name. Click "Connect your application", then copy the value down to a word document. You will need this for the next step. Your screen should look like this: ![database connection](./images/database_connection.png) 
 
 First we need to make an env file
 1. In the backend folder, create a file called '.env'
