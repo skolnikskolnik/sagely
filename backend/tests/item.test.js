@@ -8,7 +8,7 @@ const app = require("../server")
 /* Connecting to the database before each test. */
 beforeEach(async () => {
     server = app.listen(22)
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URI)
 })
 
 /* Closing database connection after each test. */
